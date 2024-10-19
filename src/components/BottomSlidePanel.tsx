@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import maplibregl from "maplibre-gl";
+import { useState } from "react";
 import KisiiForm from "../components/KisiiForm";
 import { make_report } from "../endpoints/api";
 
@@ -11,17 +10,7 @@ interface Props {
   onClose: () => void;
 }
 
-function BottomSlidePanel({
-  lat,
-  lng,
-  isVisible,
-  onLocationSelect,
-  onClose,
-}: Props) {
-  const [location, setLocation] = useState<maplibregl.LngLat>(
-    new maplibregl.LngLat(0, 0)
-  ); // Initial values
-
+function BottomSlidePanel({ lat, lng, isVisible, onClose }: Props) {
   const [isPopVisible, setIsPopVisible] = useState(false); // State to manage visibility
   const [categoryOfComplaint, setCategoryOfComplaint] = useState(""); // Complaint category state
   const [categoryOfGrievance, setCategoryOfGrievance] = useState(""); // Grievance category state

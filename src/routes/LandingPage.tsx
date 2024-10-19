@@ -7,18 +7,17 @@ import BottomSlidePanel from "../components/BottomSlidePanel";
 import Header from "../components/Header";
 import { useAuth } from "../context/useAuth";
 
-interface Report {
-  id: number; // Or 'number' if the ID is numeric
-  grivance_description: string;
-  category_of_complaint: string;
-  category_of_grivance: string;
-  status: string;
-  date: Date; // You can use Date instead if parsing the date
-}
+// interface Report {
+//   id: number; // Or 'number' if the ID is numeric
+//   grivance_description: string;
+//   category_of_complaint: string;
+//   category_of_grivance: string;
+//   status: string;
+//   date: Date; // You can use Date instead if parsing the date
+// }
 
 const LandingPage = () => {
-  const [reports, setReports] = useState<Report[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [reports, setReports] = useState<Report[]>([]);
   const MAPTILER_KEY = "Zk2vXxVka5bwTvXQmJ0l";
   const mapRef = useRef<maplibregl.Map | null>(null); // Reference for the map instance
   const [selectedLat, setSelectedLat] = useState<number | null>(null);
@@ -30,7 +29,7 @@ const LandingPage = () => {
   useEffect(() => {
     const fetchReports = async () => {
       const reports = await get_reports();
-      setReports(reports);
+      // setReports(reports_get);
       // Store reports in localStorage
       localStorage.setItem("userReports", JSON.stringify(reports));
     };

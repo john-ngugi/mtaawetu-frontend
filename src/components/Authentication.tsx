@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import { useAuth } from "../context/useAuth";
 
@@ -7,6 +7,7 @@ function Authentication() {
   const [username, setusernames] = useState("");
   const [password, setpassword] = useState("");
   const [cpassword, setCpassword] = useState("");
+  // const [message, setmessage] = useState("");
   const [email, setEmail] = useState("");
   const { login_user } = useAuth();
   const { register_user } = useAuth();
@@ -17,12 +18,12 @@ function Authentication() {
 
   const handleRegister = () => {
     register_user(username, password, email, cpassword);
-    console.log("clicked");
   };
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-900">
       <div className="w-full max-w-md p-8 space-y-4 bg-gray-800 rounded-lg shadow-lg">
+        {/* <div className="w-full bg-orange-500 p-5 ">{message}</div> */}
         {/* Toggle Tabs */}
         <div className="flex justify-around mb-6">
           <button

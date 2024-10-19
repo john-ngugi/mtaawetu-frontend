@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Search from "./Search";
 import { Menu, X } from "lucide-react"; // Import X icon for close
-import { FaTachometerAlt, FaFileAlt, FaUserCog } from "react-icons/fa"; // Icons for the menu
+import { FaFileAlt, FaUserCog } from "react-icons/fa"; // Icons for the menu
 import { useNavigate } from "react-router-dom";
 interface Suggestion {
   place_id: string;

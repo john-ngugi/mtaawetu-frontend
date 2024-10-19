@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
 import LoginComponent from "./routes/Login";
 import LandingPage from "./routes/LandingPage";
 import ReportsPage from "./routes/Reports";
